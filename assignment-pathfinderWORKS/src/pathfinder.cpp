@@ -97,6 +97,20 @@ int main()
     //William
     t -= GetFrameTime();
 
+    //Task 10 Ryan
+    if (t <= 0 || (player_path.size() > 1 && tokens < 0))
+    {
+        if (score > high_score)
+        {
+            high_score = score;
+        }
+        score = 0;
+        tokens = 2000;
+        t = 60;
+        player_path.clear();
+        player_path.push_back(start);
+    }
+
     ClearBackground(LIGHTGRAY);
 
 
